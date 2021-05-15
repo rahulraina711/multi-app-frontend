@@ -1,6 +1,6 @@
-$base-color: #fc8cb1;
-$shadow-base : -1px 13px 15px 0px rgba(239, 113, 243, 0.75);
-$body-background :  #282c34;
+$base-color: #f5f5f5;
+$shadow-base : -1px 13px 15px 0px rgba(185, 241, 245, 0.75);
+$body-background :  #f2f2f3;
 $base-light:  #F6D2E0;
 
 
@@ -17,12 +17,13 @@ $base-light:  #F6D2E0;
   align-items: center;
 
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 
   #title-logo{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid grey;
 
     width: 100%;
     background: $base-color;
@@ -75,7 +76,7 @@ $base-light:  #F6D2E0;
     display: flex;
     align-items: center;
     justify-content: left;
-    background: $base-light;
+    background: white;
     //border: greenyellow 2px solid;
 
     .switches{
@@ -84,13 +85,18 @@ $base-light:  #F6D2E0;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      padding-bottom: 5px;
+      padding: 5px 0 5px 0;
       
       .q{
-        padding: 0 5px 0 5px;
-        box-shadow: $shadow-base;
-        -webkit-box-shadow: $shadow-base;
-        -moz-box-shadow: $shadow-base;
+        padding: 0 2px 0 2px;
+        border-radius: 20%;
+        
+        &:hover{
+          box-shadow: $shadow-base;  
+        }
+        &:focus{
+          box-shadow: $shadow-base;
+        }
       }
     }
   }

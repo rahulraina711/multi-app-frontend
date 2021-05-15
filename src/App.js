@@ -1,7 +1,6 @@
 import './App.scss';
 import logo from './static/logo.png';
 import {Add, Note, FormatListBulleted, PublicOutlined} from '@material-ui/icons';
-import { blue } from '@material-ui/core/colors';
 
 function App() {
   return (
@@ -21,9 +20,9 @@ function App() {
         </div>
         <div className="more-optns">
           <div className="switches">
-            <Note className="q" style={{ fontSize: 35, color: blue[300] }} />
-            <FormatListBulleted className="q" style={{ fontSize: 35, color: blue[300] }} />
-            <PublicOutlined className="q" style={{ fontSize: 35, color: blue[300] }} />
+            <Note className="q" style={{ fontSize: 30 }} />
+            <FormatListBulleted className="q" style={{ fontSize: 30 }} />
+            <PublicOutlined className="q" style={{ fontSize: 30 }} />
           </div>
         </div>
       </footer>
