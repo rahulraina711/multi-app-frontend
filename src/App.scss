@@ -1,0 +1,89 @@
+$base-color: #fc8cb1;
+$shadow-base : 4px 8px 19px -1px rgba(0,0,0,0.75);
+$body-background :  #282c34;
+$base-light:  #F6D2E0;
+
+
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: $body-background;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  #title-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background: $base-color;
+    padding: 10px 0 10px 0;
+
+    #app-title{
+      font-size: 1.5rem;
+    }
+
+    #app-logo{
+      margin-right: 10px;
+      img{
+        width: 50px;
+      }
+    }
+  }
+
+  .content-box{
+    
+  }
+}
+
+.app-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  #add-btn-block{
+    background-color: $body-background;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    padding: 3px;
+
+    border-radius: 50%;
+
+
+    #add-btn{
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: #C8E7F5;
+      &:focus{
+        background: #78cef7;
+      }
+    }
+
+  }
+
+  .more-optns{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: $base-light;
+    //border: greenyellow 2px solid;
+
+    .switches{
+      //border: rgb(91, 109, 65) 2px solid;
+      width: 60%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}

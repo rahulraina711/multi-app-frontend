@@ -1,11 +1,33 @@
-import './App.css';
+import './App.scss';
+import logo from './static/logo.png';
+import {Add, Note, FormatListBulleted, PublicOutlined} from '@material-ui/icons';
+import { blue } from '@material-ui/core/colors';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hello
+        <div id="title-logo">
+          <div id="app-logo"><img src={logo} alt="app-logo"/></div>
+          <div id="app-title">My Notes</div>
+        </div>
+        <div className="content-box">
+          display notes here
+        </div>
       </header>
+      <footer className="app-footer">
+        <div id="add-btn-block">
+          <button id="add-btn"><Add style={{ fontSize: 30 }}/></button>
+        </div>
+        <div className="more-optns">
+          <div className="switches">
+            <Note style={{ fontSize: 40, color: blue[300] }} />
+            <FormatListBulleted style={{ fontSize: 35, color: blue[300] }} />
+            <PublicOutlined style={{ fontSize: 35, color: blue[300] }} />
+          </div>
+        </div>
+      </footer>
+      
     </div>
   );
 }
