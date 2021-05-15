@@ -1,5 +1,5 @@
 $base-color: #fc8cb1;
-$shadow-base : 4px 8px 19px -1px rgba(0,0,0,0.75);
+$shadow-base : -1px 13px 15px 0px rgba(239, 113, 243, 0.75);
 $body-background :  #282c34;
 $base-light:  #F6D2E0;
 
@@ -84,6 +84,14 @@ $base-light:  #F6D2E0;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      padding-bottom: 5px;
+      
+      .q{
+        padding: 0 5px 0 5px;
+        box-shadow: $shadow-base;
+        -webkit-box-shadow: $shadow-base;
+        -moz-box-shadow: $shadow-base;
+      }
     }
   }
 }

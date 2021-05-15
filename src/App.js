@@ -21,9 +21,9 @@ function App() {
         </div>
         <div className="more-optns">
           <div className="switches">
-            <Note style={{ fontSize: 40, color: blue[300] }} />
-            <FormatListBulleted style={{ fontSize: 35, color: blue[300] }} />
-            <PublicOutlined style={{ fontSize: 35, color: blue[300] }} />
+            <Note className="q" style={{ fontSize: 35, color: blue[300] }} />
+            <FormatListBulleted className="q" style={{ fontSize: 35, color: blue[300] }} />
+            <PublicOutlined className="q" style={{ fontSize: 35, color: blue[300] }} />
           </div>
         </div>
       </footer>
