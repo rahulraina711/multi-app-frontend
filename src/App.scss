@@ -41,7 +41,7 @@ $base-light:  #F6D2E0;
     flex-direction: column;
     justify-content: flex-start;
     width: 90%;
-    height: 43rem;
+    height: 85vh;
     overflow: scroll;
 
     .rendered-note{
@@ -71,9 +71,12 @@ $base-light:  #F6D2E0;
 }
 
 .app-footer{
+  position: fixed;
+  bottom: 0px;
   display: flex;
   flex-direction: column;
   justify-content: left;
+  width: 100%;
   #add-btn-block{
     background-color: $body-background;
     position: absolute;
