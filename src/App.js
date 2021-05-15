@@ -3,10 +3,12 @@ import logo from './static/logo.png';
 import {Add, Note, FormatListBulleted, PublicOutlined} from '@material-ui/icons';
 import {grey} from "@material-ui/core/colors";
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function App() {
 
   const [notes, setNotes] = useState([]);
+  const history = useHistory();
 
   useEffect(()=>{
     getnotes();
@@ -14,6 +16,10 @@ function App() {
 
   function getnotes(){
     setNotes(JSON.parse(localStorage.getItem("notes")));
+  }
+
+  function addNote(){
+    history.push("/createNote");
   }
 
   function renderNotes(){
@@ -41,7 +47,7 @@ function App() {
       </header>
       <footer className="app-footer">
         <div id="add-btn-block">
-          <button id="add-btn"><Add style={{ fontSize: 30 }}/></button>
+          <button id="add-btn" onClick={addNote}><Add style={{ fontSize: 30 }}/></button>
         </div>
         <div className="more-optns">
           <div className="switches">
