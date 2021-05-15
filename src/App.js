@@ -17,6 +17,7 @@ function App() {
   }
 
   function renderNotes(){
+    if(notes===null) return <>No Notes Created</>
     return notes.map(note=>{
       return(
         <div key={note.id} className="rendered-note">
