@@ -41,19 +41,25 @@ $base-light:  #F6D2E0;
     flex-direction: column;
     justify-content: flex-start;
     width: 90%;
+    height: 43rem;
+    overflow: scroll;
 
     .rendered-note{
       display: flex;
       flex-direction: column;
       padding: 5px;
       border-radius: 5px;
-      background: rgb(248, 248, 71);
       margin: 10px 0 0 0;
       border: 1px solid black;
       
-      .r-note-title{
-        font-weight: bold;
-        font-size: 1.5rem;
+      .r-note-a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .r-note-title{
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
       }
     
       .r-note-body{
@@ -74,7 +80,7 @@ $base-light:  #F6D2E0;
     right: 10px;
     bottom: 20px;
     padding: 3px;
-    border-bottom : 1px solid grey;
+    border : 1px solid grey;
     border-radius: 50%;
 
 

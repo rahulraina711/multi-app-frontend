@@ -1,6 +1,6 @@
 import './App.scss';
 import logo from './static/logo.png';
-import {Add, Note, FormatListBulleted, PublicOutlined} from '@material-ui/icons';
+import {Add, Note, FormatListBulleted, PublicOutlined, DeleteOutline} from '@material-ui/icons';
 import {grey} from "@material-ui/core/colors";
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom';
 function App() {
 
   const [notes, setNotes] = useState([]);
+  const [pxv, setPxv] = useState("0px")
   const history = useHistory();
 
   useEffect(()=>{
@@ -22,12 +23,21 @@ function App() {
     history.push("/createNote");
   }
 
+  function deleteNote(id){
+    let newNotes = notes.filter(note=> note.id !== id);
+    setNotes(newNotes);
+    localStorage.setItem("notes",JSON.stringify(newNotes));
+  }
+
   function renderNotes(){
     if(notes===null) return <>No Notes Created</>
     return notes.map(note=>{
       return(
-        <div key={note.id} className="rendered-note">
-          <div className="r-note-title">{note.title}</div>
+        <div key={note.id} className="rendered-note" style={{background:note.color || "#ffff00"}}>
+          <div className="r-note-a">
+            <div className="r-note-title" style={{textDecoration:"underline", marginBottom:"3px"}}>{note.title}</div>
+            <DeleteOutline onClick={()=>deleteNote(note.id)}/>
+          </div>
           <div className="r-note-body">{note.body}</div>
         </div>
       )
