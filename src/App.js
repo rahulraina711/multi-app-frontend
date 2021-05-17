@@ -35,7 +35,7 @@ function App() {
       return(
         <div key={note.id} className="rendered-note" style={{background:note.color || "#ffff00"}}>
           <div className="r-note-a">
-            <div className="r-note-title" style={{textDecoration:"underline", marginBottom:"3px"}}>{note.title}</div>
+            <div className="r-note-title" style={{marginBottom:"3px"}}>{note.title}</div>
             <DeleteOutline onClick={()=>deleteNote(note.id)}/>
           </div>
           <div className="r-note-body">{note.body}</div>
